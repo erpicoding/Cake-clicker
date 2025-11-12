@@ -83,7 +83,7 @@ main {
   flex-direction: column;
   align-items: center;
 
-  #counter {
+  .counter {
     text-align: center;
 
     position: fixed;
@@ -91,14 +91,22 @@ main {
 
     margin: 20px;
     min-width: 120px;
-    height: 20px;
-    line-height: 20px;
-    font-size: 32px;
 
     border-radius: 2rem;
     border: none;
     box-shadow: var(--shadow-inset);
     background: var(--gradient);
+
+    h1 {
+      line-height: 20px;
+      font-size: 32px;
+    }
+    p {
+      line-height: 10px;
+      font-size: 18px;
+      padding: 0px 16px 8px 16px;
+      padding-bottom: 8px;
+    }
   }
   #cake {
     position: fixed;
@@ -172,7 +180,7 @@ main {
 
       position: relative;
 
-      #counter,
+      .counter,
       #cake {
         position: absolute;
       }

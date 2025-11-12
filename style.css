@@ -82,19 +82,26 @@ main {
   flex-direction: column;
   align-items: center;
 }
-main #counter {
+main .counter {
   text-align: center;
   position: fixed;
   top: 0;
   margin: 20px;
   min-width: 120px;
-  height: 20px;
-  line-height: 20px;
-  font-size: 32px;
   border-radius: 2rem;
   border: none;
   box-shadow: var(--shadow-inset);
   background: var(--gradient);
+}
+main .counter h1 {
+  line-height: 20px;
+  font-size: 32px;
+}
+main .counter p {
+  line-height: 10px;
+  font-size: 18px;
+  padding: 0px 16px 8px 16px;
+  padding-bottom: 8px;
 }
 main #cake {
   position: fixed;
@@ -158,7 +165,7 @@ main .footer a {
     height: 75vh;
     position: relative;
   }
-  body main #counter,
+  body main .counter,
   body main #cake {
     position: absolute;
   }

@@ -17,7 +17,13 @@ if (localStorage.getItem("setupCompleted") == (false || null)) {
 
 const cake = document.getElementById("cake");
 const counter = document.getElementById("counter");
+const cakesPerSecoundCounter = document.getElementById(
+  "cakesPerSecoundCounter"
+);
 counter.innerHTML = numberStringGeneration(localStorage.getItem("cakes"));
+cakesPerSecoundCounter.innerHTML =
+  "pro Sekunde: " +
+  numberStringGeneration(localStorage.getItem("cakesPerSecound"));
 
 let prices = localStorage.getItem("prices").split(",");
 const itemCakesPerSecound = [
@@ -76,6 +82,8 @@ function buyItem(itemIndex) {
     localStorage.setItem("cakesPerSecound", cakesPerSecoundTotal);
     localStorage.setItem("cakes", cakes);
     counter.innerHTML = numberStringGeneration(cakes);
+    cakesPerSecoundCounter.innerHTML =
+      "pro Sekunde: " + numberStringGeneration(cakesPerSecoundTotal);
   }
   loadPrices();
 }
