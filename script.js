@@ -102,16 +102,16 @@ function numberStringGeneration(number) {
   }
 
   if (length >= 13) {
-    return parseInt(number / 1000000000000) + "t";
+    return parseInt(number / 1000000000) / 1000 + "t";
   }
   if (length >= 10) {
-    return parseInt(number / 1000000000) + "b";
+    return parseInt(number / 1000000) / 1000 + "b";
   }
   if (length >= 7) {
-    return parseInt(number / 1000000) + "m";
+    return parseInt(number / 1000) / 1000 + "m";
   }
   if (length >= 4) {
-    return parseInt(number / 1000) + "k";
+    return parseInt(number) / 1000 + "k";
   }
   return Number(number);
 }
