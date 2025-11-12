@@ -162,3 +162,28 @@ main {
     }
   }
 }
+
+@media (max-width: 800px) {
+  body {
+    flex-direction: column;
+    main {
+      width: 100%;
+      height: 75vh;
+
+      position: relative;
+
+      #counter,
+      #cake {
+        position: absolute;
+      }
+      .footer {
+        position: absolute;
+        width: 90%;
+      }
+    }
+    #shop {
+      width: calc(100% - 40px);
+      position: static;
+    }
+  }
+}
