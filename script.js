@@ -26,7 +26,7 @@ cakesPerSecoundCounter.innerHTML =
   numberStringGeneration(localStorage.getItem("cakesPerSecound"));
 
 let prices = localStorage.getItem("prices").split(",");
-const itemCakesPerSecound = [
+const itemCPSlist = [
   0.1, 1, 5, 15, 50, 125, 400, 1000, 2500, 6000, 15000, 40000, 100000, 250000,
   750000, 1500000, 5000000, 10000000, 25000000, 100000000
 ];
@@ -72,7 +72,7 @@ function buyItem(itemIndex) {
     //kuchenzahl runden, weil JS shit
     cakes = Math.round(cakes * 10) / 10;
 
-    cakesPerSecoundTotal += itemCakesPerSecound[itemIndex];
+    cakesPerSecoundTotal += itemCPSlist[itemIndex];
     cakesPerSecoundTotal = Math.round(cakesPerSecoundTotal * 10) / 10; // runden, wegen JS shit
 
     //change Item price
@@ -92,11 +92,21 @@ function loadPrices() {
   prices = localStorage.getItem("prices").split(",");
 
   for (let i = 0; i < 20; i++) {
-    //get el and array wert
+    //get el and array wert vom price
     let button = document.getElementById("buyButton" + i);
     let itemPrice = numberStringGeneration(prices[i]);
 
     button.innerHTML = itemPrice + " Cakes";
+
+    //get el and array wert vom CPS
+    let elementCPS = document.getElementById("itemCPS" + i);
+    let itemCPS = numberStringGeneration(itemCPSlist[i]);
+
+    elementCPS.innerHTML = itemCPS + " CPS";
+    elementCPS.setAttribute(
+      "title",
+      "Produziert: " + itemCPS + " Cakes per secound"
+    );
   }
 }
 

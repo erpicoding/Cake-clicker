@@ -150,6 +150,10 @@ main .footer a {
   font-weight: 500;
   color: var(--txt1-main);
 }
+#shop .shopItem p span {
+  font-weight: 400;
+  color: var(--txt2-sub);
+}
 #shop .shopItem button {
   position: absolute;
   right: 16px;

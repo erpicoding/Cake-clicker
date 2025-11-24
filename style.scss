@@ -161,6 +161,10 @@ main {
     p {
       font-weight: 500;
       color: var(--txt1-main);
+      span {
+        font-weight: 400;
+        color: var(--txt2-sub);
+      }
     }
     button {
       position: absolute;
